@@ -1,6 +1,7 @@
 Railstutorial::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/prueba"
+  match 'page1', to: 'static_pages#page_1'
+  match 'page2', to: 'static_pages#page_1'
+  root :to => 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +51,7 @@ Railstutorial::Application.routes.draw do
   #   end
 
   # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  # just remember to delete public/ruby.html.
   # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"

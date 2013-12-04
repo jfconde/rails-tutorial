@@ -1,0 +1,86 @@
+@import "bootstrap";
+
+$bgColor: #888;
+
+a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inherit; }
+
+
+@mixin linkTransition($color){
+  a{
+    transition: all .4s;
+    -webkit-transition: all .4s; /* Safari */
+    &:hover {
+      color: $color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.navbar{
+  width: 100%;
+  position: fixed;
+  height: 40px;
+  padding: 5px;
+  margin: 0;
+  background-color: $bgColor;
+  font-size: 20px;
+  border-radius: 0;
+
+  ul{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    li{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: inline;
+      color: #fff;
+
+      @include linkTransition(#ffcc00);
+    }
+  }
+  p{
+    color: #000000;
+    display: inline;
+    margin-right: 10px;
+    font-size: 25px;
+  }
+}
+
+.user-info{
+  float: right;
+  display: inline;
+  color: #fff;
+
+
+  @include linkTransition(#f00);
+
+  h3{
+    display: inline;
+    font-size: 14px;
+  }
+}
+
+.mainContainer{
+  padding: 40px 5px 0px 5px;
+  min-height: 400px;
+}
+
+.footer{
+  width: 100%;
+  margin-bottom: 0px;
+  padding: 0 20px 0 20px;
+
+  small{
+    float: left;
+    font-size: 16px;
+  }
+
+  address{
+    font-size: 18px;
+    float: right;
+    @include linkTransition($bgColor);
+  }
+}

@@ -7,6 +7,8 @@ gem "capistrano", "~> 2.13.4"
 gem 'rvm-capistrano'
 gem "therubyracer", :require => 'v8'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'less'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

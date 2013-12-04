@@ -3,9 +3,8 @@ require 'spec_helper'
 describe "Static pages" do
   describe "Home page" do
     it "Should have hola" do
-      visit '/static_pages/home'
-      page.should have_content("hola");
-      #response.status.should be(200)
+      visit static_pages_page_1_path
+      page.should have_selector("h1", text: "Page 1")
     end
   end
 end
