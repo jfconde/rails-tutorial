@@ -99,6 +99,11 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
   font-size: 22px;
 }
 
+.thinColumn{
+  width: 50%;
+  margin-left: 25%;
+}
+
 .formulario{
   width: 50%;
   margin-left: 25%;
@@ -125,4 +130,36 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
   ul li{
     color: #f00;
   }
+}
+
+.profileContainer {
+  @extend .thinColumn;
+  font-size: 24px;
+  color: #0066ee;
+  label{
+    color: #000;
+  }
+}
+
+.users{
+  @extend .thinColumn;
+
+  table {
+    width: 100%;
+    tr{
+      padding: 20px;
+    }
+
+    td{
+        width: 50%;
+        padding: 0 0 0 30px;
+        font-size: 22px;
+        @include linkTransition(#ff0000);
+        list-style-type: none;
+    }
+  }
+}
+
+.coltitle{
+  color: #0033cc;
 }

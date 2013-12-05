@@ -7,8 +7,14 @@
   </ul>
   <div class="user-info">
     <h3>
-      <%= link_to "Sign In", "#" %> |
-      <%= link_to "Register", controller: :users, action: :new %>
+      <% if(signed_in?) %>
+          <%= link_to "Account", user_path(current_user.id) %> |
+          <%= link_to "Sign Out", signout_path, method: :delete %>
+
+      <% else %>
+        <%= link_to "Sign In", controller: :sessions, action: :new %> |
+        <%= link_to "Register", controller: :users, action: :new %>
+      <% end %>
     </h3>
   </div>
 </header>

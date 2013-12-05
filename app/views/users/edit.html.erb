@@ -1,0 +1,20 @@
+<% provide(:title, "Edit user") %>
+<h1>Update your profile</h1>
+<div class="row">
+  <div class="formulario">
+    <%= form_for(@user) do |f| %>
+        <%= render 'layouts/shared/error_messages' %>
+        <%= f.label :name %>
+        <%= content_tag :p, @user.name %>
+        <%= f.label :email %>
+        <%= content_tag :p, @user.email %>
+        <%= f.label :old_password %>
+        <%= f.password_field :old_password %>
+        <%= f.label :new_password %>
+        <%= f.password_field :password %>
+        <%= f.label :password_confirmation, "Confirm New Password" %>
+        <%= f.password_field :password_confirmation %>
+        <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

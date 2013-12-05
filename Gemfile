@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'less'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker'
+gem 'bootstrap-will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

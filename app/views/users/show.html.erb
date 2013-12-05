@@ -1,2 +1,11 @@
 <% provide(:title, "User Profile") %>
-Texto de Users/SHOW!
+<h1>Profile</h1>
+
+<div class="profileContainer">
+  <label for="name">Name</label>
+  <p><%= @user.name %></p>
+  <label for="email">E-mail</label>
+  <p><%= @user.email %></p>
+  <label for="joindate">Join Date</label>
+  <p><%= @user.created_at.strftime("%d/%m/%y") %></p>
+</div>

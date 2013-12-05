@@ -1,0 +1,28 @@
+<% provide(:title, "User List") %>
+
+<h1>User List</h1>
+
+<div class="users">
+  <%= will_paginate %>
+  <table>
+    <tr class="coltitle">
+      <td>User Name</td>
+      <td>E-Mail</td>
+    </tr>
+
+    <% @users.each do |user| %>
+
+        <tr>
+          <td>
+            <%= link_to user.name, user %>
+          </td>
+          <td>
+            <%= mail_to user.email %>
+          </td>
+        </tr>
+
+    <% end %>
+  </table>
+  <%= will_paginate %>
+
+</div>

@@ -2,9 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  signin_wrong_email: "The specified e-mail could not be found."
+  signin_wrong_password: "The specified password is not correct."
 
   activerecord:
     attributes:
       user:
         password_digest: "Password"
+
+
