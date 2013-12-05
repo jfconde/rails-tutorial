@@ -1,7 +1,11 @@
 Railstutorial::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts do
 
+  end
+
+  get 'destroy_ajax', to: 'static_pages#destroy_ajax', path: 'destroy_ajax'
   match 'page1', to: 'static_pages#page_1'
   match 'page2', to: 'static_pages#page_2'
   match '/signup', to: 'users#new'

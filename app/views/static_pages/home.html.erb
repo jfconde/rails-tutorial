@@ -1,3 +1,41 @@
-<% provide(:title, 'Home') %>
+<% provide(:title, "Home") %>
+<h1>Twitter.Copy</h1>
 
-<h1>StaticPages # HOME</h1>
+<% if signed_in? %>
+    <div class="profileContainer">
+      <%= form_for(@micropost) do |t| %>
+          <%= t.label :content, "Write about something" %>
+          <%= t.text_field :content, class: "new-micropost", maxlength: 140, size: 140 %>
+          <%= t.submit "Publish now", class: "micropost-submit" %>
+      <% end %>
+
+      <label for="name">Name</label>
+      <p><%= @user.name %></p>
+      <label for="email">E-mail</label>
+      <p><%= @user.email %></p>
+      <label for="joindate">Join Date</label>
+      <p><%= @user.created_at.strftime("%d/%m/%y") %></p>
+
+    </div>
+
+    <div class="microposts">
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <% if @user.microposts.any? %>
+          <ol id="microposts">
+            <%= render @microposts %>
+          </ol>
+          <%= will_paginate(@microposts) %>
+      <% end %>
+    </div>
+
+<% else %>
+    <div align="center">
+      <p>Register or GTFO</p>
+      <p>Register or GTFO</p>
+      <p>Register or GTFO</p>
+      <p>Register or GTFO</p>
+      <p>Register or GTFO</p>
+      <p style="font-size: 34px"><%= link_to "Go Register", signup_path %></p>
+      <p style="font-size: 34px"><%= link_to "Log in", signin_path %></p>
+    </div>
+<% end %>
