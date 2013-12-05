@@ -8,7 +8,7 @@
   <div class="user-info">
     <h3>
       <% if(signed_in?) %>
-          <%= link_to "Account", user_path(current_user.id) %> |
+          <%= link_to "Profile", user_path(current_user.id) %> |
           <%= link_to "Sign Out", signout_path, method: :delete %>
 
       <% else %>

@@ -13,5 +13,14 @@ namespace :db do
       password = "password"
       User.create!(name: name, email: email, password: password, password_confirmation: password)
     end
+
+    desc "Fill the DataBase with sample tweets"
+    users = User.all(limit: 5)
+    50.times do
+      content = Faker::Lorem.sentence(5)
+      users.each{ |u| u.microposts.create!(content: content) }
+    end
+
   end
+
 end

@@ -59,7 +59,8 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
 
   h3{
     display: inline;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
   }
 }
 
@@ -104,6 +105,17 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
   margin-left: 25%;
 }
 
+.leftColumn{
+  width: 20%;
+  margin-left: 5%;
+}
+
+.rightColumn{
+  width: 65%;
+  margin: 0 5% 0 5%;
+
+}
+
 .formulario{
   width: 50%;
   margin-left: 25%;
@@ -133,8 +145,9 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
 }
 
 .profileContainer {
-  @extend .thinColumn;
-  font-size: 24px;
+  @extend .leftColumn;
+  display: inline-block;
+  font-size: 18px;
   color: #0066ee;
   label{
     color: #000;
@@ -162,4 +175,43 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
 
 .coltitle{
   color: #0033cc;
+}
+
+.microposts{
+  @extend .rightcolumn;
+  display: inline-block;
+  vertical-align: top;
+  h3{
+    margin: 0px 0px 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  width: 65%;
+}
+
+.micropost-content{
+  list-style-type: none;
+  margin: 5px;
+  padding: 5px 20px 5px 20px;
+  font-size: 19px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 5px;
+
+  .content{
+    display: block;
+    font-size: 20px;
+  }
+
+  .timestamp{
+    font-size: 14px;
+    display: block;
+  }
+}
+
+.micropost-content:hover{
+  background-color: rgba(0,100,0,0.4);
+  transition: all .4s;
+  -webkit-transition: all .4s; /* Safari */
+
 }
