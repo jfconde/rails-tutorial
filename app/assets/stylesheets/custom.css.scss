@@ -20,7 +20,7 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
 .navbar{
   width: 100%;
   position: fixed;
-  height: 40px;
+  height: 50px;
   padding: 5px;
   margin: 0;
   background-color: $bgColor;
@@ -64,23 +64,65 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
 }
 
 .mainContainer{
-  padding: 40px 5px 0px 5px;
+  padding: 55px 5px 0px 5px;
   min-height: 400px;
+
+  h1{
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 .footer{
-  width: 100%;
-  margin-bottom: 0px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 25px;
   padding: 0 20px 0 20px;
 
   small{
     float: left;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   address{
-    font-size: 18px;
+    font-size: 14px;
     float: right;
     @include linkTransition($bgColor);
+  }
+
+}
+
+.submit-bt{
+  height: 40px;
+  background-color: #0066ee;
+  color: #fff;
+  font-size: 22px;
+}
+
+.formulario{
+  width: 50%;
+  margin-left: 25%;
+
+  label{
+    width: 100%;
+  }
+
+  input{
+    width: 100%;
+    margin-bottom: 10px;
+    border: solid 1px #cccccc;
+    border-radius: 2px;
+
+    &:focus{
+      border: solid 2px #0044dd;
+      box-shadow: 0px 1px 5px #999;
+    }
+  }
+}
+
+#error_explanation{
+
+  ul li{
+    color: #f00;
   }
 }

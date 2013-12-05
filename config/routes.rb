@@ -1,5 +1,5 @@
 Railstutorial::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   match 'page1', to: 'static_pages#page_1'
   match 'page2', to: 'static_pages#page_1'
