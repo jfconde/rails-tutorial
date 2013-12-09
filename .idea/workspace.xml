@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/config/routes.rb" line="7" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e796f31-0adc-40ab-8fd9-2844cf76b679" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="4e796f31-0adc-40ab-8fd9-2844cf76b679" name="Default" comment="" />
     <ignored path="railstutorial.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
