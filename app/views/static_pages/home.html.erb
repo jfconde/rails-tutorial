@@ -16,6 +16,8 @@
       <label for="joindate">Join Date</label>
       <p><%= @user.created_at.strftime("%d/%m/%y") %></p>
 
+      <%= render "layouts/relationships_panel" %>
+
     </div>
 
     <div class="microposts">

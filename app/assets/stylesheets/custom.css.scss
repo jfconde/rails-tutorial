@@ -275,3 +275,16 @@ a, a:link, a:active, a:hover, a:visited { color: inherit; text-decoration: inher
   margin-bottom: 15px;
 
 }
+
+.relationship-field{
+  cursor: default;
+  background-color: #33AAff;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+
+  &:hover{
+    background-color: #0033cc;
+  }
+}

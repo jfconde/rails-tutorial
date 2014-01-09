@@ -1,0 +1,9 @@
+<% @user ||= current_user %>
+<div id="user-relationships">
+  <span class="relationship-field">
+    <%= "#{@user.followers.count} followers" %>
+  </span>
+  <span class="relationship-field">
+    <%= "#{@user.followed_users.count} following" %>
+  </span>
+</div>
